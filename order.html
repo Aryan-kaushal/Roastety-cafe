@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order</title>
+    <link rel="icon" type="image/png" href="logo.png">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #f0f0f0;
+            padding-top: 60px;
+        }
+
+        header {
+            padding: 0;
+            margin: 0;
+        }
+
+        footer {
+            background-color: #36454f;
+            color: wheat;
+            text-align: center;
+            padding: 20px 0;
+            margin-top: 20px;
+        }
+
+        .navbar {
+            --bs-navbar-padding-x: no;
+        }
+
+        .container-fluid {
+            background-color: #36454f;
+            padding: 1px;
+        }
+
+        .navbar-brand img {
+            height: 10vh;
+            width: 10vh;
+            margin-bottom: 3vh;
+        }
+
+        .form-control {
+            font-family: 'Roboto', sans-serif;
+        }
+
+        .btn {
+            font-family: 'Roboto', sans-serif;
+        }
+
+        img {
+            height: 12vh;
+            width: 12vh;
+            margin-top: -6px;
+            cursor: pointer;
+        }
+
+        .nav-items {
+            margin-top: 4vh;
+            font-size: 2rem;
+            color: black;
+        }
+
+        a.nav-link {
+            margin-left: 5vh;
+            color: wheat;
+            font-family: "Playwrite AT", cursive;
+            font-size: 1.2rem;
+        }
+
+        .btn-clear {
+            background-color: #0d6efd;
+            color: white;
+            border-radius: 6px;
+            border: none;
+            padding: 7.6px 12px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .btn-clear:hover {
+            background-color: #0b5ed7;
+        }
+
+    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+
+<header>
+    <nav class="navbar navbar-expand-lg fixed-top">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html">
+                <img src="coffee logo.png" alt="Coffee Logo">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Menu.html">Menu</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</header>
+
+<body>
+    <br><br><br>
+    <div class="container mt-5">
+        <form class="row g-3" action="pay.html" method="POST">
+            <div class="col-md-6">
+                <label for="inputFirstName" class="form-label">First
+                    Name</label>
+                <input type="text" class="form-control" id="inputFirstName" name="firstName"
+                    placeholder="Enter your first name" >
+            </div>
+            <div class="col-md-6">
+                <label for="inputLastName" class="form-label">Last
+                    Name</label>
+                <input type="text" class="form-control" id="inputLastName" name="lastName"
+                    placeholder="Enter your last name" >
+            </div>
+            <div class="col-md-6">
+                <label for="inputEmail" class="form-label">Email</label>
+                <input type="email" class="form-control" id="inputEmail" name="email"
+                    placeholder="Enter your email address" >
+            </div>
+            <div class="col-md-6">
+                <label for="inputPassword" class="form-label">Password</label>
+                <input type="password" class="form-control" id="inputPassword" name="password"
+                    placeholder="Enter your password" >
+            </div>
+            <div class="col-12">
+                <label for="inputAddress" class="form-label">Address</label>
+                <input type="text" class="form-control" id="inputAddress" name="address"
+                    placeholder="1234 Main St" >
+            </div>
+            <div class="col-12">
+                <label for="inputAddress2" class="form-label">Address 2</label>
+                <input type="text" class="form-control" id="inputAddress2" name="address2"
+                    placeholder="Apartment, studio, or floor">
+            </div>
+            <div class="col-md-6">
+                <label for="inputCity" class="form-label">City</label>
+                <input type="text" class="form-control" id="inputCity" name="city" >
+            </div>
+            <div class="col-md-4">
+                <label for="inputState" class="form-label">State</label>
+                <input type="text" class="form-control" id="inputState" name="state">
+            </div>
+            <div class="col-md-2">
+                <label for="inputZip" class="form-label">Zip</label>
+                <input type="text" class="form-control" id="inputZip" name="zip">
+            </div>
+            <div class="col-md-6">
+                <label for="autoSizingInput" class="form-label">Drinks</label>
+                <input type="text" class="form-control" id="autoSizingInput" name="drinks"
+                    placeholder="Drinks">
+            </div>
+            <div class="col-md-3">
+                <label for="autoSizingSelect" class="form-label">Preference</label>
+                <select class="form-select" id="autoSizingSelect" name="drinkPreference">
+                    <option selected>none</option>
+                    <option>Espresso ₹ 104.5 180ml</option>
+                    <option>Cold coffee ₹ 90 180ml</option>
+                    <option>Chocolate Cappuccino ₹ 104.5 180ml</option>
+                    <option>Caffè Mocha ₹ 90 180ml</option>
+                    <option>Caramel Macchiato ₹ 100 180ml</option>
+                    <option>Java Chip Frappuccino ₹ 362.25 180ml</option>
+                    <option>Mocha Cookie Crumble Latte ₹ 420 180ml</option>
+                    <option>Stardust Macchiato ₹ 100 180ml</option>
+                </select>
+            </div>
+            <div class="col-md-3">
+                <label for="autoSizingInputGroup" class="form-label">Quantity</label>
+                <input type="text" class="form-control" id="autoSizingInputGroup" name="drinkQuantity"
+                    placeholder="Quantity">
+            </div>
+            <div class="col-md-6">
+                <label for="autoSizingInput2" class="form-label">Cold Drinks</label>
+                <input type="text" class="form-control" id="autoSizingInput2" name="coldDrinks"
+                    placeholder="Drinks">
+            </div>
+            <div class="col-md-3">
+                <label for="autoSizingSelect2" class="form-label">Preference</label>
+                <select class="form-select" id="autoSizingSelect2" name="coldDrinkPreference">
+                    <option selected>none</option>
+                    <option>Coca cola ₹ 90 500ml</option>
+                    <option>Fanta ₹ 60 500ml</option>
+                    <option>Strawberry Mojito ₹ 100 500ml</option>
+                </select>
+            </div>
+            <div class="col-md-3">
+                <label for="autoSizingInputGroup2" class="form-label">Quantity</label>
+                <input type="text" class="form-control" id="autoSizingInputGroup2" name="coldDrinkQuantity"
+                    placeholder="Quantity">
+            </div>
+            <div class="col-md-6">
+                <label for="autoSizingInput3" class="form-label">Food</label>
+                <input type="text" class="form-control" id="autoSizingInput3" name="food" placeholder="Food">
+            </div>
+            <div class="col-md-3">
+                <label for="autoSizingSelect3" class="form-label">Preference</label>
+                <select class="form-select" id="autoSizingSelect3" name="foodPreference">
+                    <option selected>none</option>
+                    <option>Oatmeal Raisin Cookie ₹ 104 2pcs</option>
+                    <option>Bread butter ₹ 90 2-pair</option>
+                    <option>Butter Croissant ₹ 280 per pice</option>
+                    <option>Chilli Cheese Toast ₹ 360 pair</option>
+                    <option>Samosa ₹ 90 3pcs</option>
+                    <option>omelet sandwich ₹ 100 pair</option>
+                </select>
+            </div>
+            <div class="col-md-3">
+                <label for="autoSizingInputGroup3" class="form-label">Quantity</label>
+                <input type="text" class="form-control" id="autoSizingInputGroup3" name="foodQuantity"
+                    placeholder="Quantity">
+            </div>
+            <div class="col-md-6">
+                <label for="autoSizingInput4" class="form-label">Desserts</label>
+                <input type="text" class="form-control" id="autoSizingInput4" name="desserts" placeholder="Desserts">
+            </div>
+            <div class="col-md-3">
+                <label for="autoSizingSelect4" class="form-label">Preference</label>
+                <select class="form-select" id="autoSizingSelect4" name="dessertPreference">
+                    <option selected>none</option>
+                    <option>Red Velvet Cake ₹ 150 500gm</option>
+                    <option>Mix Fruit Cake ₹ 120 500gm</option>
+                    <option>Dry Cake ₹ 105 500gm</option>
+                    <option>Chocolate Cake ₹ 140.5 500gm</option>
+                    <option>Jalebi ₹ 90 per gram</option>
+                    <option>Ice Cream ₹ 80 cup</option>
+                    <option>Doughnut - out of stock</option>
+                </select>
+            </div>
+            <div class="col-md-3">
+                <label for="autoSizingInputGroup4" class="form-label">Quantity</label>
+                <input type="text" class="form-control" id="autoSizingInputGroup4" name="dessertQuantity"
+                    placeholder="Quantity">
+            </div>
+
+            <div class="col-auto">
+                <button type="submit" class="btn btn-primary">Order</button>
+            </div>
+            <div class="col-auto">
+                <input type="reset" class="btn-clear" placeholder="clear">
+            </div>
+
+        </form>
+    </div>
+
+</body>
+
+<footer>
+    <p>&copy; 2024 Aryan's Cafe. All rights reserved.</p>
+</footer>
+
+</html>
